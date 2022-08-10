@@ -25,32 +25,15 @@ import zhou from "./driverPhotos/zhou.png";
 
 
 
-class App extends Component{
-  constructor(){
-    super();
-    this.displayCards = this.displayCards.bind(this);
-  }
-
-  displayCards(){
-      return (
-        <div className="card">
-          <img src={albon}></img>
-        </div>
+const App = () =>{
+  return (
+    <div className="App">
+      <Header />
+      <div className="cardContainer">
+  
         
-    
-      );
-    
-  }
-  render() {
-    return (
-      <div className="App">
-        <Header />
-        <div className="cardContainer">
-          {this.displayCards()}
-        </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
-
 export default App;
