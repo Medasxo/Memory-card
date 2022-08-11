@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/memory-card/static/css/main.455cd1dd.css",
+    "main.js": "/memory-card/static/js/main.964eb7a8.js",
+    "static/media/hamilton.png": "/memory-card/static/media/hamilton.976ebaa57d9b575bed12.png",
+    "static/media/leclerc.png": "/memory-card/static/media/leclerc.45ee362d3bbc3d305925.png",
+    "static/media/daniel.png": "/memory-card/static/media/daniel.911062b0845ab022b478.png",
+    "static/media/mick.png": "/memory-card/static/media/mick.78c196819813a4ea9f0d.png",
+    "static/media/latifi.png": "/memory-card/static/media/latifi.a05a6e54737a1a334dab.png",
+    "static/media/alonso.png": "/memory-card/static/media/alonso.35733aef1e61b6fc0460.png",
+    "static/media/max.png": "/memory-card/static/media/max.d3992c3eae7c6e8257fb.png",
+    "static/media/sainz.png": "/memory-card/static/media/sainz.757535ea6e7b46332927.png",
+    "static/media/lando.png": "/memory-card/static/media/lando.d8f611341729911bb03d.png",
+    "static/media/lance.png": "/memory-card/static/media/lance.d7b717911cac91c75cd6.png",
+    "static/media/albon.png": "/memory-card/static/media/albon.6dba8d7380d71db1d148.png",
+    "static/media/gasly.png": "/memory-card/static/media/gasly.b8cd9c1dda46b3dd5c4a.png",
+    "static/media/ocon.png": "/memory-card/static/media/ocon.01c3c02b241368ada8dc.png",
+    "static/media/tsunoda.png": "/memory-card/static/media/tsunoda.5fa87d064fabab58dbce.png",
+    "static/media/zhou.png": "/memory-card/static/media/zhou.0d54296fc176b833ea9b.png",
+    "static/media/vettel.png": "/memory-card/static/media/vettel.6b47bde9a38f0f930504.png",
+    "static/media/checo.png": "/memory-card/static/media/checo.b36fdafd4124ad876a68.png",
+    "static/media/bottas.png": "/memory-card/static/media/bottas.b59c3d353641c80aed21.png",
+    "static/media/george.png": "/memory-card/static/media/george.2636845156807e0ad8cd.png",
+    "static/media/magnussen.png": "/memory-card/static/media/magnussen.9a1867b57f5c0af99707.png",
+    "index.html": "/memory-card/index.html",
+    "main.455cd1dd.css.map": "/memory-card/static/css/main.455cd1dd.css.map",
+    "main.964eb7a8.js.map": "/memory-card/static/js/main.964eb7a8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.455cd1dd.css",
+    "static/js/main.964eb7a8.js"
+  ]
+}
