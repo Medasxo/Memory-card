@@ -45,17 +45,29 @@ const App = () => {
     { name: "Valteri Bottas", image: bottas },
     { name: "Fernando Alonso", image: alonso },
     { name: "Alexander Albon", image: albon },
-    { name: "Lando Norris", image: lando},
+    { name: "Lando Norris", image: lando },
   ];
+
+  const shuffle = (array) => {
+    let j, x, i;
+
+    for (i = array.length - 1; i > 0; i--) {
+      j = Math.floor(Math.random() * (i + 1));
+      x = array[i];
+      array[i] = array[j];
+      array[j] = x;
+    }
+    return array;
+  };
+
   return (
     <div className="App">
       <Header />
       <div className="cardContainer">
-      {drivers.map((driver) => {
-          return <Card source={driver.image} name={driver.name} />
+        {shuffle(drivers).map((driver) => {
+          return <Card source={driver.image} name={driver.name} />;
         })}
       </div>
-
     </div>
   );
 };
