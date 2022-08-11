@@ -1,6 +1,7 @@
 import Header from "./Header";
 import "./App.css";
 import { Component } from "react";
+import Card from "./Card";
 
 import albon from "./driverPhotos/albon.png";
 import alonso from "./driverPhotos/alonso.png";
@@ -21,6 +22,7 @@ import sainz from "./driverPhotos/sainz.png";
 import tsunoda from "./driverPhotos/tsunoda.png";
 import vettel from "./driverPhotos/vettel.png";
 import zhou from "./driverPhotos/zhou.png";
+import lando from "./driverPhotos/lando.png";
 
 const App = () => {
   const drivers = [
@@ -43,11 +45,17 @@ const App = () => {
     { name: "Valteri Bottas", image: bottas },
     { name: "Fernando Alonso", image: alonso },
     { name: "Alexander Albon", image: albon },
+    { name: "Lando Norris", image: lando},
   ];
   return (
     <div className="App">
       <Header />
-      <div className="cardContainer"></div>
+      <div className="cardContainer">
+      {drivers.map((driver) => {
+          return <Card source={driver.image} name={driver.name} />
+        })}
+      </div>
+
     </div>
   );
 };
