@@ -1,8 +1,15 @@
-import Header from "./Header";
+//React import
+import React, { useState, useEffect } from "react";
+
+//CSS import 
 import "./App.css";
-import { Component } from "react";
+
+//Components import
+import Header from "./Header";
 import Card from "./Card";
 
+
+//Imports of the drivers
 import albon from "./driverPhotos/albon.png";
 import alonso from "./driverPhotos/alonso.png";
 import bottas from "./driverPhotos/bottas.png";
@@ -25,6 +32,10 @@ import zhou from "./driverPhotos/zhou.png";
 import lando from "./driverPhotos/lando.png";
 
 const App = () => {
+  const [currentScore, setCurrentScore] = useState(0);
+  const [currentHighScore, setCurrentHighScore] = useState(0);
+  const [clickedArray, setClickedArray] = useState([]);
+
   const drivers = [
     { name: "Pierre Gasly", image: gasly },
     { name: "George Russel", image: george },
@@ -60,12 +71,39 @@ const App = () => {
     return array;
   };
 
+  const incrementScore = (clickedDriver) => {
+    // If the character has already been clicked
+    if (clickedArray.includes(clickedDriver)) {
+      setClickedArray([]);
+      setCurrentScore(0);
+    }
+    // If the character hasn't been clicked
+    else {
+      setClickedArray([...clickedArray, clickedDriver]);
+      setCurrentScore(currentScore + 1);
+    }
+  };
+
+  useEffect(() => {
+    if (currentScore > currentHighScore) {
+      setCurrentHighScore(currentScore);
+    }
+  }, [currentScore, currentHighScore]);
+
   return (
     <div className="App">
-      <Header />
+      <Header currentScore={currentScore} highestScore={currentHighScore} />
       <div className="cardContainer">
         {shuffle(drivers).map((driver) => {
-          return <Card source={driver.image} name={driver.name} />;
+          return (
+            <Card
+              source={driver.image}
+              name={driver.name}
+              incrementScore={(clickedDriver) => {
+                incrementScore(clickedDriver);
+              }}
+            />
+          );
         })}
       </div>
     </div>

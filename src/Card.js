@@ -1,12 +1,14 @@
-import React from 'react'
+import React from "react";
 
-const Card = props => {
+const Card = (props) => {
   return (
-    <div className="card">
+    <div className="card" onClick={() => props.incrementScore(props.name)}>
       <img className="cardImg" src={props.source} alt={props.name} />
-      <div className="cardName"><h4>{props.name}</h4></div>
+      <div className="cardName">
+        <h4>{props.name}</h4>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default Card;
