@@ -1,13 +1,12 @@
 //React import
 import React, { useState, useEffect } from "react";
 
-//CSS import 
+//CSS import
 import "./App.css";
 
 //Components import
 import Header from "./Header";
 import Card from "./Card";
-
 
 //Imports of the drivers
 import albon from "./driverPhotos/albon.png";
@@ -31,11 +30,13 @@ import vettel from "./driverPhotos/vettel.png";
 import zhou from "./driverPhotos/zhou.png";
 import lando from "./driverPhotos/lando.png";
 
+//Main APP starts here
 const App = () => {
+  //States
+
   const [currentScore, setCurrentScore] = useState(0);
   const [currentHighScore, setCurrentHighScore] = useState(0);
   const [clickedArray, setClickedArray] = useState([]);
-
   const drivers = [
     { name: "Pierre Gasly", image: gasly },
     { name: "George Russel", image: george },
@@ -59,6 +60,9 @@ const App = () => {
     { name: "Lando Norris", image: lando },
   ];
 
+  //Functions
+
+  //Function to shuffle an array of drivers(To show them in the different place every time)
   const shuffle = (array) => {
     let j, x, i;
 
@@ -71,19 +75,21 @@ const App = () => {
     return array;
   };
 
+  //Function to increment the score in the game. (Or set current score to 0, when driver has already been clicked)
   const incrementScore = (clickedDriver) => {
-    // If the character has already been clicked
+    // If the driver has already been clicked
     if (clickedArray.includes(clickedDriver)) {
       setClickedArray([]);
       setCurrentScore(0);
     }
-    // If the character hasn't been clicked
+    // If the driver hasn't been clicked
     else {
       setClickedArray([...clickedArray, clickedDriver]);
       setCurrentScore(currentScore + 1);
     }
   };
 
+  //Hook for when currentScore and currentHighScore changes, to check whether the score doesn't surpass the previous highScore.
   useEffect(() => {
     if (currentScore > currentHighScore) {
       setCurrentHighScore(currentScore);
